@@ -8,5 +8,125 @@
 
 \section{Applied}
 
+Ordered pair: \math (a,b) = (a',b') \longleftrightarrow (a=a' \wedge b=b')\)
+\newline Set formed by ordered pairs \math (a,b)\) with a \in A\) and b \in B\) is called Cartesian product of A and B: A x B = \math \{(a,b)\vert a \in A, b \in B\}\)
+\newline When A = B, we denote A x A by A^2\), extends to n-tuple
+\\
+\\
+Cartesian coordinates: \math(x,y,z) \in \Re^3\)
+\newline Distance between 2 points \math \triangle ($M_1$,$M_1$) = \sqrt{($x_1$-$x_2$)^2+($y_1$-$y_2$)^2+($z_1$-$z_2$)^2}\)
+\\
+\\
+Polar coordinates: \math(r,\phi) \in \Re^2\)
+\newline X-axis is polar axis, r is radial distance/radius, \phi\) is polar angle/azimuth, pole is the origin (any pair with r = 0)
+\newline Therefore, ($r_0$,$\phi_0$) corresponds to r = $r_0$ and \phi = $\phi_0$ + 2n\pi\), n is arbitrary integer
+\newline Possess uniqueness when \math r > 0\) and -\pi < \phi \leq \pi\), usually r \geq\) 0 with r \in \Re\) and \phi \in (-\pi,\pi]\)
+\\
+\\
+Cylindrical coordinates: \math(\rho,\phi,z) \in \Re^3\)
+\newline Spherical coordinates: \math(r,\phi,\theta) \in \Re^3\), such that r \geq 0, \phi \in (-\pi,\pi]\) and \theta \in (0,\pi]\)
+\\
+\\
+An equation \math f(x,y,z) = 0\) is a cartesian equation of a part of \Re^3\) denoted by A if we have the equivalence: \math M(x,y,z) \in A \longleftrightarrow f(x,y,z) = 0 \)
+\newline Many different cartesian equations can specify same subset A of \Re^3\)
+\newline Every cartesian equation lowers dimensionality by one (unless constraints are related or are incompatible)
+\\
+\\
+\math f(r,\phi) = 0\) in \Re^2\) is a polar equation of a part of a plane A if: a point M is a point of A if and only if one of its systems of polar coordinates verifies \math f(r,\phi) = 0
+\\
+\\
+f(r,\phi,\theta) = 0\) is a spherical equation for a part A of \Re^3\) if: a point M is a point of A if and only if one of its systems of spherical coordinates verifies \math f(r,\phi,\theta) = 0\)
+\\
+\\
+Definition of a curve/surface as a set of points that fulfil a set of constraints is called implicit definition
+\newline Could have different parameterisations (e.g cartesian to polar coordinates)
+\\
+\\
+2-dimensional subset of \Re^3\) is obtained by defining coordinates as functions of 2 parameters. Curve is obtained by expressing all coordinates as functions of one of the parameters. Can obtain a cartesian equation by eliminating the parameter(s).
+\\
+\\
+For a given curve there are infinitely many possible parameterisations, if we view parameter t as time. Same curve could be traversed slower or faster in specific places.
+\\
+\\
+Line \math L\) going through point P with cartesian ($x_0$,$y_0$) and slope \alpha\) can be parameterised as:
+\left\{ \begin{array}{rcl}\math x = $x_0$+\lambda & \mbox{with} & \lambda \in \Re \\ y = $y_0$+\lambda \alpha \end{array}\right
+\)
+\newline Our parameterisation is the map \lambda \mapsto (x(\lambda), y(\lambda))\), the real \lambda\) is the parameter (changing to 2\lambda\) or \lambda^3\) changes the parameterisation)
+\\
+\\
+Any line \math L\) in \Re^2\) can be represented as set of (x,y) fulfiling: \math ax + by + c = 0\) with (a,b) \neq (0,0)\)
+\newline Any such equation represents a line, 2 such equations represent same line if they are proportional to each other.
+\\
+\\
+Line that goes through pole defined by the polar equation: \theta = $\theta_0$ with $\theta_0$ \in \Re\)
+\\
+\\
+Line that doesn't pass through pole: \math r = 1/(\alpha cos(\theta)+\beta cos(\theta))\) with (\alpha,\beta) \neq (0,0)
+\newline \alpha \cdot r cos(\theta) + \beta \cdot r cos(\theta) = c\) (only pass through origin if c = 0, but then we can't obtain original result)
+\\
+\\
+Set of points with cartesian \math (x,y,z)\) defined as:
+\left\{ \begin{array}{rcl}\math x = $x_0$+\lambda $u_1$+\mu $v_1$ & \mbox{with} & \lambda \in \Re \\ y = $y_0$ + \lambda $u_2$ + \mu $v_2$ \\ z = $z_0$ + \lambda $u_3$ + \mu $v_3$ \end{array}\right\)
+\newline Where $u_j$ \in \Re\) and $v_j$ \in \Re\) are fixed constants, form a plane in \Re^3\), containing the point with coordinates \math ($x_0$,$y_0$,$z_0$)\)
+\\
+\\
+Parameters \lamba\) and \mu\) can be used as coordinates in the plane \math (\lambda,\mu) \in \Re^2
+\newline ax + by + cz + d = 0\), where \math (a,b,c) \neq (0,0,0)\) defines planes in \Re^3\)
+\\
+\\
+set of points with cartesian \math (x,y,z)\) defined as:
+\left\{ \begin{array}{rcl}\math x = $x_0$+\lambda $u_1$ & \mbox{with} & \lambda \in \Re \\ y = $y_0$ + \lambda $u_2$ \\ z = $z_0$ + \lambda $u_3$ \end{array}\right\)
+\newline Where $u_j$ \in \Re\) are fixed constants, form a line in \Re^3, passing through the point with coordinates \math($x_0$,$y_0$,$z_0$)\)
+\\
+\\
+Intersection of 2 non-parallel planes as the sets of points fulfilling: \math
+\newline $a_1$x + $b_1$y + $c_1$z + $d_1$ = 0
+\newline $a_2$x + $b_2$y + $c_2$z + $d_2$ = 0\)
+\newline Where \math ($a_j$,$b_j$,$c_j$) \neq (0,0,0)\) and no such real number \alpha\) such that \math ($a_1$,$b_1$,$c_1$) = \alpha($a_2$,$b_2$,$c_2$)\), define lines in \Re^3\)
+\\
+\\
+Given a point (focus) and a line not containing this point (directrix), set of points for which the ratio of the distances to the focus and the directrix is e \in \Re^>\) (eccentricity)
+
+- ellipse when \math e < 1\)
+
+- parabola when \math e = 1\)
+
+- hyperbola when \math e >1\)
+
+Special case for which \math e = 0\) (directrix at infinity) is a circle
+\\
+\\
+Cartesian equation of conic section: \math Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0\), where A,B,C,D,E,F \in \Re  \triangle := B^2 - 4AC\)
+
+- ellipse for \triangle < 0\)
+
+- parabola for \triangle = 0\)
+
+- hyperbola for \triangle > 0\)
+\\
+\\
+Polar equation of conic section with one focus at the pole: \math r = 1/(1+e cos(\phi + $\phi_0$))\) where \math e,l \in \Re e\) is eccentricity, \math l\) is semi-latus rectus (length of straight line between focus and conic section along direction parallel to directrix)
+\\
+\\
+Circular cone: \math x^2 + y^2 - k^2z^2 = 0\)
+\\
+\\
+Kepler's first law: The planets orbit around the sun on elliptical orbits with the sun in one of the focal points.
+\newline Kepler's second law: The line connecting the sun and the sun and the planet sweeps equal areas of space during equal time intervals.
+\newline Kepler's third law: The squares of the orbital periods of the planets are proportional to the cubes of the semi-major axes of their orbits.
+\\
+\\
+Position: \math (x,y,z) \in \Re^3\)
+\newline Velocity: \math ($v_x$,$v_y$,$v_z$) = (\.{x},\.{y},\.{z})\)
+\newline Momentum: \math $p_j$ = m$v_j$
+\\
+\\
+Newton's second law in vector form: \.{p} = F\), where F is external force on "body"/"particle"
+\newline Solution \math (x(t),y(t),z(t))\) is called trajectory of particle
+\\
+\\
+Any complex number \math z = x + iy\) (with \math x,y \in \Re\)) can be expressed as \math z = re^(i\theta)\), with \math r \in \Re^>\) and \phi \in \Re
+\newline r = \vert z \vert, \vert z \vert = sqrt(x^2+y^2) (modulus of z)
+\newline \phi = -i ln(z/\vert z \vert)\) (argument or phase of z)
 
 \end{document}
