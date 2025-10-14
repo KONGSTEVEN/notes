@@ -8,7 +8,7 @@
 
 \section{Applied}
 
-Ordered pair: \math (a,b) = (a',b') \longleftrightarrow (a=a' \wedge b=b')\)
+Ordered pair: \math (a,b) = (a',b') \Leftrightarrow (a=a' \wedge b=b')\)
 \newline Set formed by ordered pairs \math (a,b)\) with a \in A\) and b \in B\) is called Cartesian product of A and B: A x B = \math \{(a,b)\vert a \in A, b \in B\}\)
 \newline When A = B, we denote A x A by A^2\), extends to n-tuple
 \\
@@ -27,7 +27,7 @@ Cylindrical coordinates: \math(\rho,\phi,z) \in \Re^3\)
 \newline Spherical coordinates: \math(r,\phi,\theta) \in \Re^3\), such that r \geq 0, \phi \in (-\pi,\pi]\) and \theta \in (0,\pi]\)
 \\
 \\
-An equation \math f(x,y,z) = 0\) is a cartesian equation of a part of \Re^3\) denoted by A if we have the equivalence: \math M(x,y,z) \in A \longleftrightarrow f(x,y,z) = 0 \)
+An equation \math f(x,y,z) = 0\) is a cartesian equation of a part of \Re^3\) denoted by A if we have the equivalence: \math M(x,y,z) \in A \Leftrightarrow f(x,y,z) = 0 \)
 \newline Many different cartesian equations can specify same subset A of \Re^3\)
 \newline Every cartesian equation lowers dimensionality by one (unless constraints are related or are incompatible)
 \\
@@ -170,5 +170,94 @@ Addition and subtraction is done component wise, commutative, associative and di
 \\
 \\
 Let $u_j$ \in \Re^3\) (with \math j \in $\mathb{N}$\) and \math j < N\)) be vectors and $a_j$ be scalars. The vector:
+\newline \math v = \sum_{j=0}^{N} $a_j$$u_j$ \)
+\newline Is a linear combination of the vectors $u_j$. $a_j$ are the coefficients.
+\\
+\\
+A set of N vectors {$u_j$} is called linearly independent if no non-trivial linear combination (not all coefficients are 0) of them sums to 0. On the contrary, called linearly dependent if at least one of the vectors in the set as a linear combination of the others: \math $u_k$ = \sum_{j \neq k}$a_j$$u_j$\) (n vectors going in different directions are able to go to any point in n-dimensions)
+\\
+\\
+A set of three vectors a, b, c is a basis of \Re^3\), if any vector \math u \in \Re^3\) can be expressed as a unique linear superposition of a, b and c:
+\newline \math u = $u_a$a+$u_b$b+$u_c$c\)
+
+- represents a vector by list of its coefficients in a given basis
+- any set of 3 linearly independent vectors $a_j$ in \Re^3\) is a basis of \Re^3\)
+\\
+\\
+Standard basis of \Re^3: (1,0,0),(0,1,0),(0,0,1) \hat{$e_1$} \hat{$e_2$} \hat{$e_3$}\)
+\\
+\\
+Det: (\Re^n\))^n \rightarrow \Re\), fulfils following properties:
+
+- linearity in each argument
+- antisymmetry with respect to interchange of arguments
+\newline To make determinant uniquely defined, pick a basis {$u_j$} and set det($u_1$,...,$u_n$) = 1
+\newline (THINK ABOUT THE POSITIVE CYCLE OF 1 -> 2 -> 3 -> 1 TO DETERMINE SIGNS)
+\newline \math det(u,v) = $u_1$$v_2$-$u_2$$v_1$
+\newline det(u,v,w) = $u_1$$v_2$$w_3$+$u_2$$v_3$$w_1$+$u_3$$v_1$$w_2$-$u_3$$v_2$$w_1$-$u_2$$v_1$$w_3$-$u_1$$v_3$$w_2$\)
+\\
+\\
+Determinant of n non-zero vectors is zero if and only if the vectors are linearly dependent. Proof:
+\newline If 2 vectors are linearly dependent:
+
+\math det(u,v) = \alpha det(v,v) = 0 \)
+\newline suppose neither u or v are 0 and are linearly independent, then:
+
+\newline \math \hat{$e_1$} = $\alpha_1$u+$\beta_1$v\), and \hat{$e_2$} = $\alpha_2$u+$\beta_2$v\) where \math det(u,v) = 0\)
+\newline Using bi-linearity of determinant:
+
+\math det(\hat{$e_1$},\hat{$e_2$}) = $\alpha_1$$\alpha_2$det(u,u)+$\alpha_1$$\beta_2$det(u,v)+$\alpha_2$$\beta_1$det(v,u)+$\beta_1$$\beta_2$det(v,v)
+= 0\)
+\newline Which is a contradiction since \math det(\hat{$e_1$},\hat{$e_2$}) = 1\) so if \math det(u,v) = 0\), then u, v are linearly dependent
+\\
+\\
+Let \math u = \alpha v+\beta w
+
+det(u,v,w) = \alpha det(v,v,w)+\beta det(w,v,w)=0\)
+\\
+\\
+Dot product: \math u \cdot v = \vert u \vert \vert v \vert cos(\phi) = $u_1$$v_1$+$u_2$$v_2$+$u_3$$v_3$\)
+\newline a) \math u \cdot v = v \cdot u\) (symmetry)
+\newline b) \math (\lambda u+ \mu w) \cdot v = \lambda u \cdot v+\mu w \cdot v\) (linearity in first argument)
+\newline c) \math u \cdot (\lambda v + \mu w) = \lambda u \cdot v + \mu u \cdot w\) (linearity in second argument)
+\newline d) \math u \cdot u \geq 0\) and \math u \cdot u=0 \Leftrightarrow u=0\)
+\\
+\\
+Cauchy-Schwarz Inequality: let u and v be 2 vectors in \Re^3\), then:
+
+\math \vert u \cdot v \vert \leq \vert u \vert \vert v \vert \)
+\newline With equality when u and v are linearly dependent
+\\
+\\
+Triangle Inequality: let u and v be 2 vectors in \Re^3\), then:
+
+\math \vert u+v \vert \leq \vert u \vert + \vert v \vert\)
+\\
+\\
+Let u and v be vectors in \Re^3\) with v \neq 0\), there is a unique real \lambda\) such that \math u-\lambda v\) is perpendicular to v: \math u = \lambda v + (u-\lambda v)
+
+\lambda = (u \cdot v)/(\vert v \vert^2)
+
+$proj_v$u = (u \cdot v)/(\vert v \vert^2) v\)
+\\
+\\
+A set of vectors {$u_j$} is said to be orthonormal if each vector is normalised and pairwise orthogonal
+
+\math $u_j$ \cdot $u_k$ = $\delta_jk$ \)
+\newline Kronecker symbol $\delta_jk$ = \left\{ \begin{arrary}{rcl} 1 & if j=k \\ 0 & otherwise \end{array}\right\)
+\\
+\\
+Basis composed of orthonormal vectors is an orthonormal basis
+
+- set of three orthonormal vectors in \Re^3\) forms a basis
+- if {$w_1$,$w_2$,$w_3$} is an orthonormal basis of \Re^3\) and \math u = $\alpha_1$$w_1$+$\alpha_2$$w_2$+$\alpha_3$$w_3$\) then \math $a_j$ = u \cdot $w_j$\)
+\\
+\\
+Given 2 vectors u and v in \Re^3\) and orthonormal basis {$b_j$}
+\newline \math u = $u_1$$b_1$+$u_2$$b_2$+$u_3$$b_3$\) and \math v = $v_1$$b_1$+$v_2$$b_2$+$v_3$$b_3$\)
+\newline Their inner product is given by \math u \cdot v = $u_1$$v_1$+$u_2$$v_2$+$u_3$$v_3$\)
+\\
+\\
+\math u = \alpha $\hat{e}_1$
 
 \end{document}
