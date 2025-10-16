@@ -313,6 +313,146 @@ Vector triple product \math u x (v x w)
 
 \section{Logic and Sets}
 
+Logical proposition is a true/false statement
+\newline "and" \wedge
+\newlilne "or" \vee
+\newlline "not" \neg
+\newline "implies" \Rightarrow (Only way to disprove is when P is true and Q is false)
+\newlline "if and only if" \Leftrightarrow (P\Rightarrow Q) \wedge (Q \Rightarrow P), P = Q
+\\
+\\
+Propositional formula is smallest set off strings of propositions and connectives such that, if P and Q are propositional formula then so are P \wedge Q, P \vee Q, \neg P, Q \Rightarrow P, P \Leftrightarrow Q
+\newline Logically equivalent if they have the same truth table
+\\
+\\
+Law of excluded middle: \neg (\neg P) \Leftrightarrow P
+\newlilne De Morgan's laws: \neg (P \vee Q) = (\neg P) \wedge (\neg Q), \neg (P \wedge Q) = (\neg P) \vee (\neg Q)
+\newline Transitivity: we know P \Rightarrow Q and Q \Rightarrow P, deduce P \Rightarrow R
+\newline Contrappositive: (P \Rightarrow Q) \Rightarrow (\neg Q \Rightarrow \neg P)
+\newline Distributivity: P \wedge (Q \vee R) \Leftrightarrow (P \wedge Q) \vee (P \wedge R), P \vee (Q \wedge R) \Leftrightarrow (P \vee Q) \wedge (P \vee R)
+\\
+\\
+Sets {}
 
+- Only have elements once
+
+- Don't come in a particular order
+
+- Empty set denoted as \varnothing
+
+- x \in\) X, "x is an element of X"
+
+- Subsets \subseteq
+
+- X \cup Y = {t \vert t \in X \vee t \in Y}
+
+- X \cap Y = {t \vert t \in X \wedge t \in Y}
+
+- X \diagdown Y, {x \in X \vert x \notin Y} \)
+\\
+\\
+Complement \={X} = {t \in \Omega \vert t \notin X}\) were X \subseteq \Omega \)
+\newlline Let X \subseteq \Omega\) and Y \subseteq \Omega\) aer subsets:
+\newline \={X \cup Y} = \={X} \cap \={Y}
+\newline \={X \cap Y} = \={X} \cup \={Y}\)
+\\
+\\
+\forall "for all", \exists "there exists"
+\\
+\\
+$\bigcup_{n=0}^{\infty} $X_n$$ defined as {x \in \Omega \vert \exists x \in N, x \in $X_n$}
+\newline $\bigcap_{n=0}^{\infty} $X_n$$ defined as {x \in \Omega \vert \forall x \in N, x \in $X_n$}
+\\
+\\
+\exists x \in \varnothing\), P is always false (if P were true, would imply such an x exists but it doesn't)
+\newline \forall x \in \varnothing\), P is always true (it is the logical negation, \exists x \in \varnothing, \neg P\))
+\\
+\\
+\math f:X \rightarrow Y\) is a function if: (domain and codomain)
+\newline \forall x \in X \exists y \in Y (f(x) = y \wedge \forall z \in Y (f(x) = z \Rightarrow y = z)
+
+- When you give x \in X, it will return an element
+
+- Function depends on domain and codomain
+
+- Value of f(x) can't change over time
+
+- Cannot e one-to-many
+\\
+\\
+Image/Range of f: {y \in Y \vert \exists x \in X, f(x) = y}
+\newline \mapsto  "maps to"
+\\
+\\
+Identity function: if x \in X, x \mapsto  x
+\newline Empty function: function from empty set X to Y
+\\
+\\
+\math f:A \rightarrow B and g:B \rightarrow C\)), then \math g \circ f: A \rightarrow C\), (g composed with f)
+\newline \math $f_1$: X \rightarrow Y\) and \math $f_2$: X \rightarrow Y\), tey are equal if, \forall x \in X\) we have \math $f_1$(x ) = $f_2$(x )\)
+\\
+\\
+Injective: if \forall a,b \in X, f(a) = f(b) \Rightarrow a=b
+\newline Surjective: if \forall y \in Y, \exists x \in X, f(x) = y
+\newline Bijective: if it is both injective and surjective
+\\
+\\
+If f and g are both injective/surjective/bijective, then so is g \circ f
+\\
+\\
+Inverse: say \math f:X \rightarrow Y\) is a function, \math g:Y \rightarrow X\) is a two-sided inverse of \math f\)) if:
+\newline \forall x \in X, g(f(x)) = x
+\newline \forall y \in Y, f(g(y)) = y
+\newline \math f:X \rightarrow Y\) has a two-sided inverse if and only if it's a bijection, proof:
+\\
+\\
+Proving injectivity of f:
+
+Say p \in X and q \in X, and f(p) = f(q)
+\newline Applying inverse function g(f(p)) = g(f(q))
+\newline g(f(q)) = p
+\newline g(f(p)) = q, by definition
+\newline hence p = q
+\\
+\\
+Proving surjectivity of f:
+
+Say y \in Y, define x = g(y)
+\newline f(x) = f(g(y)) = y by definition
+\newline hence there exists x \in X with f(x) = y
+\\
+\\
+Proving other way:
+
+Say y \in Y, we would like to define an element g(y) \in X by bijectivity (we know that tere exists x \in X st. f(x) = y (surjectivity), due to injectivity, only one such x exists), we define g(y) to be the element x \in X with f(x) = y, unique. Therefore f(g(y)) = y.
+
+Say x \in X, define y = f(x), since f(g(y)) = y, g(y) is the only element in x such tat tis holds, tereffore g(y) = x, hence g(f(x)) = x.
+\\
+\\
+A binary relation R on a set X is a subset of X^2, this set is denoted by R(x,y)
+\\
+\\
+Sets as function: as a fffunction from \Re^2\) to prop {true,false}
+\newline Functions as sets: f:X \rightarrow Y is a subset of X x Y, {(x,y) \in X x Y \vert f(x) = y}
+\\
+\\
+Predicate: a property - proposition attached to each element of a set
+\\
+\\
+Reflexive: \forall x \in X, R(x,x) is true
+\newline Symmetric: \forall a,bb \in X, R(a,b) \Rightarrow R(b,a)
+\newlline Antisymmetric: \forall a,b \in X, R(a,b) \wedge R(b,a) \Rightarrow a = b
+\newline Transitive: for every a,b,c \in X, we have (R(a,b) \wedge R(b,c)) \Rightarrow R(a,c)
+
+- R is a partial order if it's reflexive, antisymmetric and transitive
+- R is total if for all a,b \in X, either R(a,b) \vee R(b,a) is true
+- R is a total order if it's a partial order and total
+\\
+\\
+R is an equivalence relation if it is reflexive, antisymmetric and transitive
+\\
+\\
+Let X be a set and let ~ be an equivalence relation on X. Let s \in X bbe an arbitrary element We define the equivallence class of S, written cl(s), to be the set of elements of X which s is related to. 
+\newline cl(s) = {x \in X: s~x}
 
 \end{document}
