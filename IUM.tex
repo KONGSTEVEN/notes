@@ -8,6 +8,175 @@
 
 \section{Applied}
 
+\subsection{From Newton to the moon}
+
+Ordered pairs: \math (a,b) = (a',b') \Leftrightarrow (a = a' \wedge b = b')\)
+\newline Cartesian product \math A \times B = {(a,b) \vert a \in A, b \in B}, A^2\)
+\\
+Cartesian coordinates: \math (x,y,z) \in R^3\)
+\newline Polar coordinates: \math (r,\phi) \in R^2, r \geq 0, \phi (-\pi, \pi]\)
+\newline Cylindrical coordinates: \math (\rho,\phi,z) \in R^3, \rho > 0, \phi \in (-\pi,\pi]\)
+\newline Spherical coordinates: \math (r,\phi,\theta) \in R^3, r \geq 0, \phi \in (-\pi,\pi], \theta \in [0,\pi]\)
+\\
+\\
+Implicit definition of curve or surface as a set of points that fulfil a set of constraints. Parametric definition
+\\
+\\
+Lines in R^2\):
+
+- \left\{ \begin{array}{rcl}\math x = $x_0$+\lambda & \mbox{with} & \lambda \in R \\ y = $y_0$+\lambda \alpha \end{array}\right
+\)
+
+- \math ax + by + c = 0\) with \math (a,b) \neq (0,0)\)
+
+- Goes through pole: \theta = $\theta_0$\) with $\theta_0$ \in R\)
+
+- Doesn't go through pole: \math r = \frac{1}{\alpha cos(\theta)+\beta cos(\theta)}\) with \math (\alpha,\beta) \neq (0,0)\)
+\\
+\\
+Planes and lines in R^3\):
+
+- \left\{ \begin{array}{rcl}\math x = $x_0$+\lambda $u_1$+\mu $v_1$ & \mbox{with} & \lambda \in R \\ y = $y_0$ + \lambda $u_2$ + \mu $v_2$ \\ z = $z_0$ + \lambda $u_3$ + \mu $v_3$ \end{array}\right\)
+
+- \math ax + by + cz + d = 0\), where \math (a,b,c) \neq (0,0,0)\) defines planes in R^3\)
+
+- \left\{ \begin{array}{rcl}\math x = $x_0$+\lambda $u_1$ & \mbox{with} & \lambda \in R \\ y = $y_0$ + \lambda $u_2$ \\ z = $z_0$ + \lambda $u_3$ \end{array}\right\)
+
+- \math $a_1$x + $b_1$y + $c_1$z + $d_1$ = 0
+
+\newline $a_2$x + $b_2$y + $c_2$z + $d_2$ = 0\)
+\\
+\\
+Given a point (focus) and a line not containing this point (directrix), set of points for which the ratio of the distances to the focus and the directrix is e \in R^>\) (eccentricity)
+
+- Ellipse when \math e < 1\)
+
+- Parabola when \math e = 1\)
+
+- Hyperbola when \math e > 1\)
+
+Special case for which \math e = 0\) (directrix at infinity) is a circle
+\newline Cartesian equation of conic section: \math Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0\), where A,B,C,D,E,F \in R \triangle := B^2 - 4AC\)
+
+- Ellipse for \triangle < 0\)
+
+- Parabola for \triangle = 0\)
+
+- Hyperbola for \triangle > 0\)
+\newline Polar equation of conic section with one focus at the pole: \math r = \frac{l}{1+e cos(\phi+$\phi_0$)}\) where \math e,l \in R, e\) is eccentricity, \math l\) is semi-latus rectus (length of straight line between focus and conic section along direction parallel to directrix)
+\newline Circular cone: \math x^2 + y^2 - k^2z^2 = 0\)
+\\
+\\
+Kepler's first law: The planets orbit around the sun on elliptical orbits with the sun in one of the focal points.
+\newline Kepler's second law: The line connecting the sun and the sun and the planet sweeps equal areas of space during equal time intervals.
+\newline Kepler's third law: The squares of the orbital periods of the planets are proportional to the cubes of the semi-major axes of their orbits.
+\\
+\\
+Position: \math (x,y,z) \in R^3\)
+\newline Velocity: \math ($v_x$,$v_y$,$v_z$) = (\.{x},\.{y},\.{z})\)
+\newline Momentum: \math $p_j$ = m$v_j$
+\newline Solution \math (x(t),y(t),z(t))\) is called trajectory of particle
+\newline Newton's second law in vector form: \.{p} = F\), where F is external force on "body"/"particle"
+\\
+\\
+Rotations in the plane are commutative and amount to one, multiplying complex numbers in polar form
+\\
+\\
+\math i^2 = j^2 = k^2 = ijk = -1 \)
+\newline A quaternion q is then an object of the form \math q = $q_0$ + i$q_1$ + j$q_2$ + k$q_3$\) with \math $q_0,1,2,3$ \in R\)
+\\
+\\
+\vert u \vert = sqrt{$u_1$^2,$u_2$^2,$u_3$^2}\) (euclidean norm, find distance between 2 points)
+\newline "normalised", \vert u \vert = 1 = \hat{u}\) (unit vector)
+\newline \math(0,0,0)\) (zero vector)
+\newline Scalar multiplication and vector addition/subtraction (commutative, associative and distributive)
+\\
+\\
+Parallelogram rule: \vert u + v \vert^2 + \vert u - v \vert^2 = 2 \vert u \vert^2 + 2 \vert v \vert^2\)
+\\
+\\
+A set of N vectors {$u_j$} is called linearly independent if no non-trivial linear combination (not all coefficients are 0) of them sums to 0. On the contrary, called linearly dependent if at least one of the vectors in the set as a linear combination of the others: \math $u_k$ = \sum_{j \neq k}$a_j$$u_j$\)
+\\
+\\
+A set of three vectors a, b, c is a basis of R^3\), if any vector \math u \in R^3\) can be expressed as a unique linear superposition of a, b and c: \math u = $u_a$a + $u_b$b + $u_c$c\) (N vectors going in different directions are able to go to any point in N-dimensions)
+
+Standard basis of R^3: \math (1,0,0),(0,1,0),(0,0,1) \hat{$e_1$} \hat{$e_2$} \hat{$e_3$}\)
+\\
+\\
+\math Det: (R^n\))^n \rightarrow R\), fulfils following properties:
+
+- Linearity in each argument 
+
+- Antisymmetry with respect to interchange of arguments
+\newline To make determinant uniquely defined, pick a basis {$u_j$} and set \math det($u_1$,...,$u_n$) = 1\)
+\newline (Think about the positive cycle of \math 1 \rightarrow 2 \rightarrow 3 \rightarrow 1\) to determine signs)
+\newline \math det(u,v) = $u_1$$v_2$ - $u_2$$v_1$\)
+\newline \math det(u,v,w) = $u_1$$v_2$$w_3$ + $u_2$$v_3$$w_1$ + $u_3$$v_1$$w_2$ - $u_3$$v_2$$w_1$ - $u_2$$v_1$$w_3$ - $u_1$$v_3$$w_2$\)
+\\
+\\
+The determinant of \math n\) non-zero vectors is zero if and only if the vectors are linearly dependent
+\\
+\\
+Dot/scalar product in R^3\): (Symmetric bilinear form)
+
+\math u \cdot v = \vert u \vert \vert v \vert cos(\phi) = $u_1$$v_1$ + $u_2$$v_2$ + $u_3$$v_3$\)
+\\
+\\
+Cauchy-Schwarz Inequality: let u and v be 2 vectors in R^3\), then:
+
+\math \vert u \cdot v \vert \leq \vert u \vert \vert v \vert\), with equality when u and v are linearly dependent
+\newline Triangle Inequality: let u and v be 2 vectors in R^3\), then:
+
+\math \vert u + v \vert \leq \vert u \vert + \vert v \vert\)
+\\
+\\
+Let u and v be vectors in R^3\) with \math v \neq 0\), there is a unique real \lambda\) such that \math u - \lambda v\) is perpendicular to v: \math u = \lambda v + (u - \lambda v)
+
+\lambda = \frac{u \cdot v}{\vert v \vert^2}
+
+$proj_v$u = \frac{u \cdot v}{\vert v \vert^2} v\)
+\\
+\\
+A set of vectors {$u_j$} is said to be orthonormal if each vector is normalised and pairwise orthogonal
+
+\math $u_j$ \cdot $u_k$ = $\delta_jk$ \)
+\newline Kronecker symbol $\delta_jk$ = \left\{ \begin{arrary}{rcl} 1 & if j=k \\ 0 & otherwise \end{array}\right\)
+\\
+\\
+\math u = \alpha $\hat{e}_1$+\beta $\hat{e}_2$, v = -\beta$\hat{e}_1$+\alpha $\hat{e}_2$\) orthogonal to \^{u}, \lambda \^{v}\) vectors in R^2\) orthogonal to \^{u}, \lambda \in R\)
+\\
+\\
+Plane P oriented by orthonormal basis {$\hat{e}_1$, $\hat{e}_2$}, an orthonormal basis {\^{u},\^{v}\)} is said to be right-handed if vectors are given by:
+\newline \^{u} = \alpha $\hat{e}_1$+\beta $\hat{e}_2$\) and \^{v} = -\beta $\hat{e}_1$+\alpha $\hat{e}_2$\)
+\newline and left_handed by: \^{u} = \alpha $\hat{e}_1$+\beta $\hat{e}_2$\) and \^{v} = \beta $\hat{e}_1$-\alpha $\hat{e}_2$\)
+\newline with \math (\alpha,\beta) \in R^2\) and \alpha^2 + \beta^2 = 1\)
+\\
+\\
+Vector product: (Antisymmetric bilinear form)
+
+\newline \math (($y_1$$z_2$ - $y_2$$z_1$),($z_1$$x_2$ - $z_2$$x_1$),($x_1$$y_2$ - $x_2$$y_1$))\)
+\\
+\\
+\math u \times v = det(u,v) = \vert u \vert \vert v \vert sin(\phi)\) (Area of parallelogram spanned by the two vectors u and v)
+\newline \vert u \times v \vert^2 = \vert u \vert^2 \vert v \vert^2 - (u \cdot v)^2\)
+\\
+\\
+Let {\^{u},\^{v},\^{w}\)} an orthonormal basis: right-handed if \^{w} = \^{u} \times \^{v}\) and left-handed if \^{w} = -\^{u} \times \^{v}\)
+\newline (first finger: u, second finger: v, thumb: u x v)
+\\
+\\
+Scalar triple product: \math [u,v,w] = u \cdot (v \times w) = det(u,v,w)\)
+\newline Volume of parallelepiped \math \vert [u,v,w] \vert
+\newline [u,v,w] = [v,w,u] = [w,u,v] = -[u,w,v] = -[w,v,u] = -[v,u,w] \)
+\\
+\\
+Vector triple product: \math u \times (v \times w)
+\newline u \times (v \times w) = (u \cdot w)v - (u \cdot v)w\)
+
+\subsection{Vector spaces and atomic physics}
+
+
+
 \section{Logic and Sets}
 
 \subsection{Sets and Logic}
