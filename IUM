@@ -13,41 +13,117 @@
 \subsection{Sets and Logic}
 
 A logical proposition is a true/false statement
-\newline "And" \wedge
-\newline "Or" \vee
-\newline "Not" \not
-\newline "Implies" \Rightarrow (Only way to disprove if something true implies something false)
-\newline "If and only if" \Leftrightarrow
-\newline Propositional formula: smallest set of strings of propositions and connectives such that, if P and Q are propositional formula then so are P\wedge Q, P\vee Q, \not P, Q\Rightarrow P, P \Leftrightarrow Q
+\newline "And" \wedge\)
+\newline "Or" \vee\)
+\newline "Not" \neg\)
+\newline "Implies" \Rightarrow\) (Only way to disprove if something true implies something false)
+\newline "If and only if" \Leftrightarrow\) (Prove both ways)
 \newline Propositional formula are logically equivalent if they have the same truth table, propositions are logically equivalent if and only if they are equal
 \\
 \\
-Law of excluded middle: If P is a proposition, then \not(\not P)\Leftrightarrow P
+Law of excluded middle: If P is a proposition, then \neg\) (\neg\) P) \Leftrightarrow\) P
 \newline De Morgan's laws:
 
-- \not(P\vee Q)\Leftrightarrow (\not P)\wedge (\not Q)
+- \neg\) (P \vee\) Q) \Leftrightarrow\) (\neg\) P) \wedge\) (\neg\) Q)
 
-- \not(P\wedge Q)\Leftrightarrow (\not P)\vee (\not Q)
-\newline Transitivity: if P\Rightarrow Q and Q\Rightarrow R, then P\Rightarrow R
-\newline Contrapositive: (P\Rightarrow Q)\Leftrightarrow (\not Q\Rightarrow \not P)
+- \neg\) (P \wedge\) Q) \Leftrightarrow\) (\neg\) P) \vee\) (\neg\) Q)
+\newline Transitivity: if P \Rightarrow\) Q and Q \Rightarrow\) R, then P \Rightarrow\) R
+\newline Contrapositive: (P \Rightarrow\) Q) \Leftrightarrow\) (\neg\) Q \Rightarrow \neg\) P)
 \newline Distributivity:
 
-- P\wedge (Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P\wedge R)
-- P\vee (Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)
-\newline We can build all of the logical functions using \not and \vee
+- P \wedge\) (Q \vee\) R) \Leftrightarrow\) (P \wedge\) Q) \vee\) (P \wedge\) R)
+
+- P \vee\) (Q \wedge\) R) \Leftrightarrow\) (P \vee\) Q) \wedge\) (P \vee\) R)
 \\
 \\
 Square root of 2 is irrational:
 
 Lemma: If n is an integer, then n is even if and only if n^2 is even
-\newline Use contradiction to prove that there is no rational number whose square is 2
-\\
-\\
-Sets {}:
 
-- 
+Use contradiction to prove that there is no rational number whose square is 2
+\\
+\\
+Sets:
+
+- Can only have elements in once
+
+- Elements don't come in a particular order
+
+- X \diagdown\) Y "What you get after you remove Y from X"
+
+- \={X \cup Y} = \={X} \cap \={Y}
+
+- \={X \cap Y} = \={X} \cup \={Y}\)
+\\
+\\
+- \neg (\forall x \in X, P(x)) \Leftrightarrow \exists x \in X, \neg (P(x))
+
+- \neg (\exists x \in X, P(x)) \Leftrightarrow \forall x \in X, \neg (P(x))\)
+\\
+\\
+\exists x \in \varnothing\), P is always false (if P were true, would imply such an x exists but it doesn't)
+\newline \forall x \in \varnothing\), P is always true (it is the logical negation, \exists x \in \varnothing, \neg P\))
 
 \subsection{Functions and Equivalence Relations}
+
+\math f:X \rightarrow Y\) is a function if: (domain and codomain)
+
+- When you give \math x \in X\), it will return an element (not multiple)
+
+- Function depends on domain and codomain
+
+- Value of f(x) can't change over time
+\\
+\\
+Image/Range of \math f:{y \in Y \vert \exists x \in X, f(x) = y}\)
+\\
+\\
+Identity function: if x \in X, x \mapsto  x\)
+\newline Empty function: function from empty set X to Y
+\\
+\\
+\math f:A \rightarrow B\) and \math g:B \rightarrow C\), then \math g \circ f:A \rightarrow C\), (g composed with f)
+\newline \math $f_1$:X \rightarrow Y\) and \math $f_2$:X \rightarrow Y\), they are equal if, \forall x \in X\) we have \math $f_1$(x) = $f_2$(x)\)
+\\
+\\
+Injective: if \forall a,b \in X, f(a) = f(b) \Rightarrow a=b\)
+\newline Surjective: if \forall y \in Y, \exists x \in X, f(x) = y\)
+\newline Bijective: if it is both injective and surjective
+\\
+\\
+If f and g are both injective/surjective/bijective, then so is \math g \circ f\)
+\\
+\\
+Inverse: say \math f:X \rightarrow Y\) is a function, \math g:Y \rightarrow X\) is a two-sided inverse of f if:
+\newline \forall x \in X, g(f(x)) = x
+\newline \forall y \in Y, f(g(y)) = y
+\newline \math f:X \rightarrow Y\) has a two-sided inverse if and only if it's a bijection,
+\\
+\\
+A binary relation R on a set X is a subset of X^2\), this set is denoted by \math R(x,y)\)
+\\
+\\
+Reflexive: \forall x \in X\), \math R(x,x)\) is true
+\newline Symmetric: \forall a,b \in X, R(a,b) \Rightarrow R(b,a)\)
+\newline Antisymmetric: \forall a,b \in X, R(a,b) \wedge R(b,a) \Rightarrow a = b\)
+\newline Transitive: for every \math a,b,c \in X,\) we have \math (R(a,b) \wedge R(b,c)) \Rightarrow R(a,c)\)
+
+- R is a partial order if it's reflexive, antisymmetric and transitive
+- R is total if for all \math a,b \in X\), either \math R(a,b) \vee R(b,a)\) is true
+- R is a total order if it's a partial order and total
+\\
+\\
+R is an equivalence relation if it is reflexive, antisymmetric and transitive
+\\
+\\
+Let X be a set and let ~ be an equivalence relation on X. Let s \in\) X be an arbitrary element We define the equivalence class of S, written cl(s), to be the set of elements of X which s is related to. \math cl(s) = {x \in X: s~x}\)
+
+- If s∼t then \math cl(t) \subset cl(s) \Rightarrow cl(t) = cl(s)\)
+
+- if \neg (s∼t)\) then \math cl(t) \cap cl(s) = \emptyset\)
+\\
+\\
+Partition of a set X is a set A of non-empty subsets of X with the property that each element of X is in exactly one of the subsets (equivalence classes)
 
 \section{Numbers}
 
@@ -64,9 +140,9 @@ Peano axioms:
 \\
 Addition:
 
-- a+0=0
+- \math a + 0 = 0\)
 
-- a+S(n)=S(a+n)
+- \math a + S(n) = S(a + n)\)
 \\
 \\
 Induction on n (fix other variables):
@@ -80,186 +156,188 @@ Induction on n (fix other variables):
 \\
 Basic properties:
 
-- 0+x=x
+- \math 0 + x = x\)
 
-- S(a)+x=S(a+x)
+- \math S(a) + x = S(a + x)\)
 
-- a+b=b+a (Commutativity of addition)
+- \math a + b = b + a\) (Commutativity of addition)
 
-- (a+b)+c=a+(b+c) (Associativity of addition)
+- \math (a + b) + c = a + (b + c)\) (Associativity of addition)
 \\
 \\
 Multiplication:
 
-- ax0=0
+- \math a \times 0 = 0\)
 
-- axS(n)=axn+a
-\newline Basic facts:
+- \math a \times S(n) = a \times n + a\)
+\\
+\\
+\newline Basic properties:
 
-- xx1=x
+- \math x \times 1 = x\)
 
-- 0x=0
+- \math 0 \times x = 0\)
 
-- S(x)y=xy+y
+- \math S(x)y = xy + y\)
 
-- xy=yx (Commutativity of multiplication)
+- \math xy = yx\) (Commutativity of multiplication)
 
-- 1xx=x
+- \math 1 \times x = x\)
 
-- x(y+z)=xy+xz (Distributivity of multiplication)
+- \math x(y + z) = xy + xz\) (Distributivity of multiplication)
 
-- (x+y)z=xz+yz
+- \math (x + y)z = xz + yz\)
 
-- (xy)z=x(yz) (Associativity of multiplication)
+- \math (xy)z = x(yz)\) (Associativity of multiplication)
 \\
 \\
 Peano's remaining axioms (useful for proving "if some equation is true, then some other equation is also true"):
 
-- If x is a natural number, then S(x)\neq 0 (if you keep applying S() you will never end up back at 0)
+- If x is a natural number, then \math S(x) \neq 0\) (if you keep applying S() you will never end up back at 0)
 
-- If x and y are natural numbers and S(x)=S(y), then x=y (S() is injective)
+- If x and y are natural numbers and \math S(x) = S(y)\), then \math x = y\) (\math S()\) is injective)
 \\
 \\
 Other theorems:
 
-- If x+n=y+n then x=y
+- If \math x + n = y + n\) then \math x = y\)
 
-- If x+n=n , then x=0
+- If \math x + n = n\), then \math x = 0\)
 
-- x+y=0, then x=y=0
+- \math x + y = 0\), then \math x = y = 0\)
 \\
 \\
-Ordering on the naturals: We say that x\leq y if there exists a natural number n such that y=x+n
+Ordering on the naturals: We say that \math x \leq y\) if there exists a natural number n such that \math y = x + n\)
 
-- 0\leq x
+- \math 0 \leq x\)
 
-- x\leq x (reflexivity)
+- \math x \leq x\) (reflexivity)
 
-- x\leq S(x)
+- \math x \leq S(x)\)
 
-- If x\leq 0 then x=0
+- If \math x \leq 0\) then \math x = 0\)
 
-- If x\leq y and y\leq z then x\leq z (transitivity)
+- If \math x \leq y\) and \math y \leq z\) then \math x \leq z\) (transitivity)
 
-- If x\leq y and y\leq x then x=y (antisymmetry)
+- If \math x \leq y\) and \math y \leq x\) then \math x = y\) (antisymmetry)
 
-- Either x\leq y or y\leq x (totality)
+- Either \math x \leq y\) or \math y \leq x\) (totality)
 
-- If a \leq b then a+x\leq b+x
+- If \math a \leq b\) then \math a + x \leq b + x\) 
 
-- If a\leq b then axx\leq bxx
+- If \math a \leq b\) then \math a \times x \leq b \times x\)
 \\
 \\
-Strong induction (no base case): For every n, you can deduce $P_n$, if you assume $P_t$ for all t \less n
+Strong induction (no base case): For every n, you can deduce $P_n$, if you assume $P_t$ \forall t < n\)
 
 - Deduce that the naturals are well-ordered, if it has one or more elements in a set then it has a smallest element
 \newline Strong recursion: It is safe to define a function from N to a set X by a recursive formula in which F(n) depends on any or all previous values of F
 \\
 \\
-Quotient function $q_b$:N\rightarrow N
+Quotient function \math $q_b$:N \rightarrow N\)
 
-- If a\geq b: then there exists k such that a=b+k, and we set $q_b$(a) to be $q_b$(k)+1
+- If \math a \geq b\): then there exists k such that \math a = b + k\), and we set \math $q_b$(a) = $q_b$(k) + 1\)
 
-- Otherwise: we set $q_b$(a) to be 0
-\newline Remainder function $r_b$:N\rightarrow N
+- Otherwise: we set \math $q_b$(a)\) to be 0
+\newline Remainder function \math $r_b$:N \rightarrow N\)
 
-- If a\geq b: then there exists k such that a=b+k, and we set $r_b$(a) to be $r_b$(k)
+- If \math a \geq b\): then there exists k such that \math a = b + k\), and we set \math $r_b$(a) = $r_b$(k)\)
 
-- Otherwise: we set $r_b$(a) to be a
+- Otherwise: we set \math $r_b$(a)\) to be a
 \newline Quotient-Remainder Theorem: (q is quotient and r is remainder when a is divided by b)
 
-- 0\leq r\less b
+- \math 0 \leq r < b\)
 
-- a=bq+r
-\newline We say that m \vert n if there exists a number k such that n=mxk
+- \math a = bq + r\)
+\newline We say that \math m \vert n\) if there exists a number k such that \math n = m \times k\)
 
-- If d divides both a and a+k, then d divides k
+- If d divides both a and \math a + k\), then d divides k
 
-- Prime number is n\geq 2 which is divisible only by 1 and itself, otherwise composite
+- Prime number is \math n \geq 2\) which is divisible only by 1 and itself, otherwise composite
 
-- Every n\geq 2 can be factored as a finite product of prime numbers
+- Every \math n \geq 2\) can be factored as a finite product of prime numbers
 
 - There are infinitely many primes
 \\
 \\
-Euclid's algorithm: $gcd_a$:N\rightarrow N (gcd stands for greatest common divisor)
+Euclid's algorithm: \math $gcd_a$:N \rightarrow N\) (gcd stands for greatest common divisor)
 
-- $gcd_0$ is the identity function: for all b, $gcd_0$(b)=b
+- \math $gcd_0$\) is the identity function: \forall b, $gcd_0$(b) = b\)
 
-- For nonzero a, $gcd_a$(b) = $gcd_$r_a$(b)$(a)
+- For nonzero a, \math $gcd_a$(b) = $gcd_$r_a$(b)$(a)\)
 \newline Results from this:
 
-- gcd(a,b) is always positive, unless both inputs are 0
+- \math gcd(a,b)\) is always positive, unless both inputs are 0
 
-- gcd(a,b) divides both a and b
+- \math gcd(a,b)\) divides both a and b
 
-- If x is any number which divides a and b, then it also divides gcd(a,b)
+- If x is any number which divides a and b, then it also divides \math gcd(a,b)\)
 
 \subsection{Integers}
 
-We want to assign the integers as the difference between 2 natural numbers, but there are many ways we can do this. Therefore, we put an equivalence relation on the set, and then consider equivalence classes. Since we haven't defined subtraction, we can't relate pairs (a,b) and (c,d) with a-b=c-d, instead we use a+d=b+c.
+We want to assign the integers as the difference between 2 natural numbers, but there are many ways we can do this. Therefore, we put an equivalence relation on the set, and then consider equivalence classes. Since we haven't defined subtraction, we can't relate pairs \math (a,b)\) and \math (c,d)\) with \math a - b = c - d\), instead we use \math a + d = b + c\).
 
-Prove that (a,b)∼(c,d) if and only if a+d=b+c is an equivalence relation
-\newline Set of integers is the set of all equivalence classes for N^2 under this equivalence relation
+Prove that \math (a,b)∼(c,d)\) if and only if \math a + d = b + c\) is an equivalence relation
+\newline Set of integers is the set of all equivalence classes for N^2\) under this equivalence relation
 \\
 \\
-We want N \subset Z, but the definition natural number 2 and integer 2 are not equal, Define function i from N to Z, sending natural number n to equivalence class of (n,0). (i is injective)
+We want N \subset\) Z, but the definition natural number 2 and integer 2 are not equal, Define function i from N to Z, sending natural number n to equivalence class of \math (n,0)\). (i is injective)
 \\
 \\
-(pre-definition on N^2, playing well with equivalence means if a=b then f(a)=f(b), show that it is well-defined)
+(pre-definition on N^2\), playing well with equivalence means if \math a = b\) then \math f(a) = f(b)\), show that it is well-defined)
 \newline Subtraction:
 
-- Pre-negation function, defining -(a,b) to be (b,a)
+- Pre-negation function, defining \math -(a,b)\) to be \math (b,a)\)
 
-- If (a,b)∼(c,d) then -(a,b)∼-(c,d)
+- If \math (a,b) $\sim$ (c,d)\) then \math -(a,b) ∼ -(c,d)\)
 
-- Negation on integers, function sending equivalence class of (a,b) to the equivalence class of (b,a)
+- Negation on integers, function sending equivalence class of \math (a,b)\) to the equivalence class of \math (b,a)\)
 
-- Subtraction on integers, x-y=x+(-y)
+- Subtraction on integers, \math x - y = x + (-y)\)
 \newline Addition:
 
-- Pre-addition function, (a,b) and (c,d) return (a+c,b+d)
+- Pre-addition function, \math (a,b)\) and \math (c,d)\) return \math (a + c,b + d)\)
 
-- If (a,b)∼(a',b') and (c,d)∼(c',d') then (a+c,b+d)∼(a'+c',b'+d')
+- If \math (a,b) $\sim$ (a',b')\) and \math (c,d) $\sim$ (c',d')\) then \math (a + c,b + d) $\sim$ (a' + c',b' + d')\)
 
-- Addition on integers, cl(a,b)+cl(c,d)=cl(a+c,b+d)
+- Addition on integers, \math cl(a,b) + cl(c,d) = cl(a + c,b + d)\)
 \newline Multiplication:
 
-- Pre-multiplication function, (a,b)x(c,d) = (ac+bd,ad+bc)
+- Pre-multiplication function, \math (a,b) \times (c,d) = (ac + bd,ad + bc)\)
 
-- If (a,b)∼(a',b') then (a,b)x(c,d)∼(a',b')x(c,d)
+- If \math (a,b) $\sim$ (a',b')\) then \math (a,b) \times (c,d) $\sim$ (a',b') \times (c,d)\)
 
-- If (c,d)∼(c',d') then (a,b)x(c,d)∼(a,b)x(c',d')
+- If \math (c,d) $\sim$ (c',d')\) then \math (a,b) \times (c,d) $\sim$ (a,b) \times (c',d')\)
 
-- Multiplication on integers, cl(a,b)xcl(c,d)=cl(ac+bd,ad+bc)
+- Multiplication on integers, \math cl(a,b) \times cl(c,d) = cl(ac + bd,ad + bc)\)
 \\
 \\
-There are integers \lambda and \mu such that gcd(a,b) = \lambda a+\mu b
-\newline If a and b are coprime, then there exists integers \lambda and \mu such that \lambda a+\mu b=1
-\newline Euclid's lemma: if p is prime and if a,b are natural numbers, and if p \vert ab, then p \vert a or p \vert b
-\newline if p is prime and if $a_1$,...,$a_2$ are natural numbers, and if p \vert $a_1$,...,$a_n$ then p divides one of $a_i$
+There are integers \lambda\) and \mu\) such that \math gcd(a,b) = \lambda a + \mu b\)
+\newline If a and b are coprime, then there exists integers \lambda\) and \mu\) such that \lambda a + \mu b = 1\)
+\newline Euclid's lemma: if p is prime and if a,b are natural numbers, and if p \vert\) ab, then p \vert\) a or p \vert\) b
+\newline if p is prime and if $a_1$,...,$a_2$ are natural numbers, and if p \vert\) $a_1$,...,$a_n$ then p divides one of $a_i$
 \newline Proving prime factorisation is unique: (strong induction)
-\newline Quotient-remainder for integers: there exists integers q and r with 0 \leq r \less b and a=qb+r
-\newline If a is an integer, b is positive integer, and a=qb+r=q'b+r' with 0\leq r, r'\less b then q=q' and r=r'
+\newline Quotient-remainder for integers: there exists integers q and r with \math 0 \leq r < b\) and \math a = qb + r\)
+\newline If a is an integer, b is positive integer, and \math a = qb + r = q'b + r'\) with \math 0 \leq r\),\math r' < b\) then \math q = q'\) and \math r = r'\)
 \\
 \\
-a \equiv b mod n, if n \vert (a-b)
+a \equiv\) b mod n, if n \vert (a - b)\)
 
-- a \equiv b mod n
+- a \equiv\) b mod n
 
-- If a \equiv b mod n, then b \equiv a mod n
+- If a \equiv\) b mod n, then b \equiv\) a mod n
 
-- If a \equiv b mod n and b \equiv c mod n, then a \equiv c mod n
+- If a \equiv\) b mod n and b \equiv\) c mod n, then a \equiv\) c mod n
 
-- a \equiv b mod n if and only if a and b have the same remainder after division by n
+- a \equiv\) b mod n if and only if a and b have the same remainder after division by n
 
 - There are exactly n congruence classes modulo n
 \\
 \\
 Pre-addition and pre-multiplication for integers mod n:
 
-- a+b\equiv a'+b' mod n
+- \math a + b \equiv a' + b'\) mod n
 
-- ab\equiv a'b' mod n
+- \math ab \equiv a'b'\) mod n
 
 \end{document}
