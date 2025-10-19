@@ -215,7 +215,41 @@ Set of all linear combinations of a given set of vectors {$u_j$} with arbitrary 
 Largest possible number N of linearly independent vectors in a vector space V is called the dimension of V
 \\
 \\
-Linear map
+Finite-dimensional vector space V over the field F, map \math T:V \rightarrow V\) is linear if \math T(\lambda u + \mu v) = \lambda T(u) + \mu T(v) \forall \lambda,\mu \in F, u,v \in V\)
+\newline Let {$v_j$} be the basis of the vector space V. A linear map \math T:V \rightarrow V\) is uniquely defined by the set of vectors {T($v_j$)}
+\newline There exist a unique set of scalars such that they form a matrix of the linear map
+\newline It is invertible if there exist a linear map \math T^-1\) such that \math T^-1(T(v)) = v = T(T^-1(v)), \forall v \in V\). If the determinant of its matrix representation is non-zero.
+\\
+\\
+(Complex) Inner product space is a complex vector space V together with a map V \times\) V \rightarrow\) C:
+
+- (Anti)-symmetry: \math (u,v) = (v,u)^*\) (asterisk denotes complex conjugation)
+
+- Non-negativity: \math (u,u) \geq 0, (u,u) = 0 \Leftrightarrow u = 0\)
+
+- Linearity in one of the elements (The other is the complex conjugate): \math (u,\lambda v + \mu v) = \lambda (u,v) + \mu (u,w)\)
+\\
+\\
+Norm \vert v \vert^2 = (v,v)\)
+\newline Cauchy-Schwarz inequality:
+
+\vert u \cdot v \vert \leq \vert u \vert \vert v \vert\)
+\newline Triangle inequality:
+
+\vert u + v \vert \leq \vert u \vert + \vert v \vert\)
+\\
+\\
+Orthogonal if \math (u,v) = 0 = (v,u)\)
+\newline Orthonormal if each vector is normalised and pairwise orthogonal \math ($u_j$,$u_k$) = $\delta_jk$ \)
+\newline Coefficients of a vector can be found by orthonormality condition \math $u_j$ = ($b_j$,u)\)
+\\
+\\
+Let \math u = \sum_{j=1}^{N} $u_j$ $b_j$, v = \sum_{j=1}^{N} $v_j$ $b_j$\)
+
+Their inner product is: \math (u,v) = \sum_{j=1}^{N} $u_j$^* $v_j$\)
+\\
+\\
+Standard/canonical basis
 
 \section{Logic and Sets}
 
