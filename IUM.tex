@@ -157,7 +157,13 @@ Vector product: (Antisymmetric bilinear form)
 \newline \math (($y_1$$z_2$ - $y_2$$z_1$),($z_1$$x_2$ - $z_2$$x_1$),($x_1$$y_2$ - $x_2$$y_1$))\)
 \\
 \\
-\math u \times v = det(u,v) = \vert u \vert \vert v \vert sin(\phi)\) (Area of parallelogram spanned by the two vectors u and v)
+\math u \times v = det(u,v) = \vert u \vert \vert v \vert sin(\phi)\) 
+
+- Area of parallelogram spanned by the two vectors u and v 
+
+- Can be used with $proj_v$u to determine length of point to line
+
+- If det(u,v) is positive, then oriented angle is also positive
 \newline \vert u \times v \vert^2 = \vert u \vert^2 \vert v \vert^2 - (u \cdot v)^2\)
 \\
 \\
@@ -399,7 +405,7 @@ Induction on n (fix other variables):
 \\
 Basic properties:
 
-- \math 0 + x = x\)
+- \math 0 + x = x\) (0 is additive identity)
 
 - \math S(a) + x = S(a + x)\)
 
@@ -417,7 +423,7 @@ Multiplication:
 \\
 \newline Basic properties:
 
-- \math x \times 1 = x\)
+- \math x \times 1 = x\) (1 is multiplicative identity)
 
 - \math 0 \times x = 0\)
 
@@ -425,11 +431,11 @@ Multiplication:
 
 - \math xy = yx\) (Commutativity of multiplication)
 
-- \math 1 \times x = x\)
+- \math 1 \times x = x\) (1 is multiplicative identity)
 
-- \math x(y + z) = xy + xz\) (Distributivity of multiplication)
+- \math x(y + z) = xy + xz\) (Distributivity of multiplication over addition)
 
-- \math (x + y)z = xz + yz\)
+- \math (x + y)z = xz + yz\) (Distributivity of multiplication over addition)
 
 - \math (xy)z = x(yz)\) (Associativity of multiplication)
 \\
@@ -537,6 +543,8 @@ We want N \subset\) Z, but the definition natural number 2 and integer 2 are not
 - Negation on integers, function sending equivalence class of \math (a,b)\) to the equivalence class of \math (b,a)\)
 
 - Subtraction on integers, \math x - y = x + (-y)\)
+
+- \math (-x) + x = x + (-x)\) (Negation is an additive inverse)
 \newline Addition:
 
 - Pre-addition function, \math (a,b)\) and \math (c,d)\) return \math (a + c,b + d)\)
@@ -582,5 +590,70 @@ Pre-addition and pre-multiplication for integers mod n:
 - \math a + b \equiv a' + b'\) mod n
 
 - \math ab \equiv a'b'\) mod n
+
+\subsection{Rationals}
+
+Division: define binary relation on \math Z \times (z - {0}): (a,b) ∼ (c,d)\) if and only if \math ad = bc\)
+
+The rationals are defined to be the set of equivalence classes for this equivalence relation
+\\
+\\
+Pre-operations:
+
+- Pre-addition on \math Z \times (Z - {0}): (a,b) + (c,d) = (ad + bc,bd)\)
+
+- Pre-negation on \math Z \times (Z - {0}): -(a,b) = (-a,b)\)
+
+- Pre-multiplication on \math Z \times (Z - {0}): (a,b) \times (c,d) = (ac,bd)\)
+
+- Pre-reciprocal on Z \times (Z - {0}): (a,b)^-1 = (b,a)\)
+\\
+\\
+Pre-operations descend to the set of equivalence classes:
+
+- If \math (a,b) ∼ (a',b')\) then \math (a,b) + (c,d) ∼ (a',b') + (c,d)\), and if \math (c,d) ∼ (c',d')\) then \math (a,b) + (c,d) ∼ (a,b) + (c',d')\)
+
+- If \math (a,b) ∼ (a',b')\) then \math -(a,b) ∼ -(a',b')\)
+
+- If \math (a,b) ∼ (a',b')\) then \math (a,b) \times (c,d) ∼ (a',b') \times (c,d)\) and if \math (c,d) ∼ (c',d')\) then \math (a,b) \times (c,d) ∼ (a,b) \times (c',d')\)
+
+- If \math (a,b) ∼ (a',b')\) and \matha, a' \neq -0\) then \math (a,b)^-1 ∼ (a',b')^-1\)
+\\
+\\
+Definitions:
+
+- \math cl(a,b) + cl(c,d) = cl((a,b) + (c,d))\)
+
+- \math -cl(a,b) = cl(-a,b)\)
+
+- \math cl(a,b) \times cl(c,d) = cl(ac,bd)\)
+
+- If \math x \neq 0\) then \math x \times x^-1 = x^-1 \times x = 1\) (reciprocal is a multiplicative inverse)
+\\
+\\
+1. An integer is non-negative if it is in the image of the map \math i:N \rightarrow Z\)
+\newline 2. A rational number is non-negative if it has a representative (a,b) with a and b being non-negative integers
+\newline 3. If x and y are rational, then \math x \leq y\) if \math y - x\) is non-negative (\leq\) is a total order and satisfies monotonicity properties)
+\\
+\\
+\math 1 \neq 0\) (Fields have at least two elements)
+\\
+\\
+Ordered field, a field F together with a total order \leq\) such that additionally if \math x,y,t \in F\) with \math x \leq y\) then:
+
+- \math x + t \leq y + t\) (relationship between \leq\) and +)
+
+- \math t \geq 0\) then \math x \times t \leq y \times t\) (relationship between \leq\) and \times\))
+\newline Let X be a totally ordered set
+
+- Subset S of X is called "bounded above" if there is an element B \in\) X such that \forall x \in S, x \leq B\)
+
+- If S is "bounded above", then any B \in\) X such that \forall x \in S, x \leq B\) is called an "upper bound" for S
+\newline We say that an element L \in\) X is a "least upper bound" for S if
+
+- L is an "upper bound" for S
+
+- If x \math <\) L then x is not an "upper bound" for S
+\newline Completeness: A totally ordered set X is said to be complete if every nonempty bounded-above subset of X has a least upper bound
 
 \end{document}
